@@ -81,7 +81,7 @@ public class TDSAndroidPostBuildProcessor : IPostGenerateGradleAndroidProject
                 implementation 'com.appsflyer:af-android-sdk:6.5.2'
                 implementation 'com.adjust.sdk:adjust-android:4.24.1'
                 implementation 'com.android.installreferrer:installreferrer:2.2'
-                implementation 'com.android.billingclient:billing:5.2.0'
+                implementation 'com.android.billingclient:billing:7.0.0'
                 implementation 'androidx.annotation:annotation:1.2.0'
                 implementation 'androidx.appcompat:appcompat:1.2.0'
                 implementation 'androidx.recyclerview:recyclerview:1.2.1'
@@ -193,7 +193,7 @@ public class TDSAndroidPostBuildProcessor : IPostGenerateGradleAndroidProject
                 implementation 'com.appsflyer:af-android-sdk:6.5.2'
                 implementation 'com.adjust.sdk:adjust-android:4.24.1'
                 implementation 'com.android.installreferrer:installreferrer:2.2'
-                implementation 'com.android.billingclient:billing:5.2.0'
+                implementation 'com.android.billingclient:billing:7.0.0'
     
                 implementation 'androidx.annotation:annotation:1.2.0'
                 implementation 'androidx.appcompat:appcompat:1.2.0'

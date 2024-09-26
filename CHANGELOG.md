@@ -1,5 +1,13 @@
 # ChangeLog
 
+## v1.7.0
+
+Feature
+
+[Android]
+- 升级 Google 结算库版本至 7.0.0
+- 适配 Android 14 (ApiLeve 34)
+
 ## v1.6.0
 
 Feature
