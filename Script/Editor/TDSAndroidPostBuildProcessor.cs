@@ -124,15 +124,15 @@ public class TDSAndroidPostBuildProcessor : IPostGenerateGradleAndroidProject
         {
             return;
         }
-
-        string googleServiceOriginPath = projectPath + "/unityLibrary/src/main/assets/google-services.json";
+        var parentFolder = Directory.GetParent(Application.dataPath)?.FullName;
+        var googleJsonPath = parentFolder + "/Assets/Plugins/Android/google-services.json";
 
         string targetServicePath = projectPath + "/launcher/google-services.json";
 
-        if (File.Exists(googleServiceOriginPath))
+        if (File.Exists(googleJsonPath))
         {
             //copy google-service.json 到目录下
-            File.Copy(googleServiceOriginPath, targetServicePath, true);
+            File.Copy(googleJsonPath, targetServicePath, true);
         }
 
         string launcherGradle = projectPath + "/launcher/build.gradle";
@@ -164,9 +164,7 @@ public class TDSAndroidPostBuildProcessor : IPostGenerateGradleAndroidProject
             Debug.Log("write project gradle");
             TDSEditor.TDSScriptStreamWriterHelper writerHelper =
                 new TDSEditor.TDSScriptStreamWriterHelper(baseProjectGradle);
-            writerHelper.WriteBelow(@"task clean(type: Delete) {
-    delete rootProject.buildDir
-}", @"allprojects {
+			writerHelper.WriteBelow(@"classpath 'com.android.tools.build:gradle:", @"allprojects {
     buildscript {
         dependencies {
             classpath 'com.google.gms:google-services:4.0.2'
