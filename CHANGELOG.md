@@ -1,5 +1,13 @@
 # ChangeLog
 
+## v1.7.1
+
+[Android]
+- 升级 AppsFlyer SDK 版本至 6.15.0
+
+[iOS]
+- 升级 AppsFlyer SDK 版本至 6.13.1
+
 ## v1.7.0
 
 Feature
